@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!-- link:css -->
+    <style>
+        .btn-brown {
+            background-color: brown !important;
+            color: white !important;
+            border: 1px solid brown;
+        }
+
+        .card-brown {
+            border: 10px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button type="button" class="btn btn-primary btn-brown">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button> -->
+
+    <!-- 2 Jenis container dalam bootstrap
+        - Container Fluid
+        Membungkus elemen yang sifatnya full width (lebar nya memenuhi layar)
+        
+        - Container
+        Membungkus elemen yang tidak memenuhi layar dan berada di tengah
+    -->
+
+    <!-- <div class="container-fluid">
+        <h1 class="text-center">Container Fluid</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem officiis architecto, 
+            commodi magnam animi quo, voluptatum reprehenderit 
+            neque excepturi aut perspiciatis tempora unde quaerat nam dolor accusantium 
+            beatae impedit voluptates.</p>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Container</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam 
+            voluptatibus labore maxime vitae, error esse, 
+            saepe quo voluptatum magni quia facilis! Cumque quam perspiciatis quis 
+            eius nam beatae officia ipsa.</p>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#profile">Profile</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- .container>.row>(.col-md-4>p)*3 -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi fuga, facilis pariatur id minus laborum architecto 
+                    quia nesciunt ad aspernatur numquam nemo eaque dolore velit? Optio mollitia exercitationem qui.</p>
+            </div>
+            <div class="col-md-4 col-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi fuga, facilis pariatur id minus laborum architecto 
+                    quia nesciunt ad aspernatur numquam nemo eaque dolore velit? Optio mollitia exercitationem qui.</p>
+            </div>
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi fuga, facilis pariatur id minus laborum architecto 
+                    quia nesciunt ad aspernatur numquam nemo eaque dolore velit? Optio mollitia exercitationem qui.</p>
+            </div>
+
+            <div class="col-md-7 col-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi fuga, facilis pariatur id minus laborum architecto 
+                    quia nesciunt ad aspernatur numquam nemo eaque dolore velit? Optio mollitia exercitationem qui.</p>
+            </div>
+            <div class="col-md-5 col-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi fuga, facilis pariatur id minus laborum architecto 
+                    quia nesciunt ad aspernatur numquam nemo eaque dolore velit? Optio mollitia exercitationem qui.</p>
+            </div>
+        </div>
+    </div> -->
+    <a href="#card-last" class="btn btn-primary">Click Here</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown" id="profile">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="about">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mt-4">
+                <div class="card d-block d-sm-none card-brown" id="card-test">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card card-brown" id="card-last">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1554600740-951beab4712b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Kopi Starling</h5>
+                        <a href="#" class="btn btn-primary btn-brown">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script:src -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
